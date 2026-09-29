@@ -5,6 +5,7 @@ import { Bookmark, Check, ChevronDown, Code2, Copy, Moon, Plus, RotateCcw, Sun, 
 import { GradientButton } from "./gradient-button";
 import { exportCode, fingerprint, isSavedStyle, isStyle, migrateLegacyLabel, original, presets, type GradientStyle, type SavedStyle } from "@/lib/gradients";
 
+// Keep storage keys stable across branding changes to preserve saved styles.
 const GALLERY_KEY = "only-buttons.gallery.v1";
 const DRAFT_KEY = "only-buttons.draft.v1";
 type Toast = { message: string; removed?: SavedStyle };
@@ -159,7 +160,7 @@ export function ButtonStudio() {
   return <>
     <header className="site-header">
       <div className="header-inner">
-        <button className="wordmark" onClick={() => setView("studio")} aria-label="only-buttons home"><span className="brand-mark" aria-hidden="true" />only-buttons<span className="wordmark-dot">.</span></button>
+        <button className="wordmark" onClick={() => setView("studio")} aria-label="only-gradient-buttons home"><span className="brand-mark" aria-hidden="true" />only-gradient-buttons<span className="wordmark-dot">.</span></button>
         <nav className="navigation" aria-label="Main navigation">
           <button className={view === "studio" ? "active" : ""} aria-pressed={view === "studio"} onClick={() => setView("studio")}>Studio</button>
           <button className={view === "gallery" ? "active" : ""} aria-pressed={view === "gallery"} onClick={() => setView("gallery")}>Gallery<span className="nav-count">{gallery.length}</span></button>

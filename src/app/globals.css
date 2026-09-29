@@ -156,6 +156,8 @@ input[type="range"]::-moz-range-thumb { width: 13px; height: 13px; background: w
   .gallery-heading { margin-top: 36px; }
 }
 @media (max-width: 440px) {
+  .site-header { height: 112px; }
+  .header-inner { flex-direction: column; justify-content: center; gap: 12px; }
   .header-inner, main { width: calc(100% - 32px); }
   .wordmark { font-size: 18px; letter-spacing: -0.7px; gap: 0; }
   .brand-mark { display: none; }
