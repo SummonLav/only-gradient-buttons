@@ -2,7 +2,7 @@
 
 A quiet studio for gradient buttons. Next.js, React, TypeScript, and plain CSS.
 
-![only-gradient-buttons studio with an Order now button and gradient presets](docs/preview.png)
+![only-gradient-buttons studio with an Order now button and gradient presets](docs/preview-hd.png)
 
 ```sh
 npm install
