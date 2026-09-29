@@ -1,0 +1,30 @@
+.static-gradient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  font: 600 15px/1.2 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  text-align: center;
+}
+.static-gradient::before,
+.static-gradient__grain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.static-gradient::before { content: ""; background: var(--gradient); }
+.static-gradient__grain { width: 100%; height: 100%; opacity: var(--grain); mix-blend-mode: soft-light; }
+.gradient-label { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.gradient-icon { flex-shrink: 0; }
+.live-gradient { transition: transform 160ms ease; }
+.live-gradient:hover { transform: translateY(-1px); }
+.live-gradient:active { transform: scale(0.98); }
